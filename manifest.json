@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "SneakyMouse Tool",
+  "version": "0.1",
+
+  "description": "Adds a button to easily participate in the SneakyMouse game on twitch.tv/rurikar22.",
+  "homepage-url": "https://github.com/BegbertBiggs/SneakyMouse-tool",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/mouse-56.png",
+    "default_title": "robSneakyMouse"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://twitch.tv/rurikar22*"],
+      "js": ["mouse_script.js"]
+    }
+  ]
+
+}
